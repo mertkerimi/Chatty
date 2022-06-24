@@ -38,40 +38,39 @@ const SignUp = () => {
         </Subheading>
       )}
       <TextInput
-        label="Name"
+        label="Kullanıcı Adı"
         value={name}
         onChangeText={(text) => setName(text)}
       />
       <TextInput
-        label="Email"
+        label="E-mail"
         style={{ marginTop: 12 }}
         value={email}
         onChangeText={(text) => setEmail(text)}
         keyboardType="email-address"
+        autoCapitalize="none"
       />
       <TextInput
-        label="Password"
+        label="Şifre"
         style={{ marginTop: 12 }}
         value={password}
         onChangeText={(text) => setPassword(text)}
         secureTextEntry
+
       />
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "space-between",
+          justifyContent: "flex-end",
           marginTop: 16,
         }}
       >
-        <Button compact onPress={() => navigation.navigate("SignIn")}>
-          Sıgn In
-        </Button>
         <Button
           mode="contained"
           onPress={() => createAccount()}
           loading={isLoading}
         >
-          Sıgn Up
+          Kayıt Ol
         </Button>
       </View>
     </View>

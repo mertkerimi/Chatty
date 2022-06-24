@@ -16,14 +16,13 @@ const Settings = () => {
 
   return (
     <View style={{ alignItems: "center", marginTop: 16 }}>
-      <Avatar.Text
-        label={name.split(" ").reduce((prev, current) => prev + current[0], "")}
-      />
+      <Avatar.Image size={200} source={require('../assets/avatar.png')} />
       <Title>{name}</Title>
       <Subheading>{email}</Subheading>
-      <Button onPress={() => firebase.auth().signOut()}>Sıgn Out</Button>
+      <Button onPress={() => firebase.auth().signOut()}>Çıkış Yap</Button>
     </View>
   );
 };
 
 export default Settings;
+

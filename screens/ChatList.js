@@ -62,6 +62,8 @@ const ChatList = () => {
             title={chat.data().users.find((x) => x !== email)}
             description={(chat.data().messages ?? [])[0]?.text ?? undefined}
             left={() => (
+              <Avatar.Image size={56} source={require('../assets/avatar.png')} />
+              /*
               <Avatar.Text
                 label={chat
                   .data()
@@ -70,6 +72,7 @@ const ChatList = () => {
                   .reduce((prev, current) => prev + current[0], "")}
                 size={56}
               />
+              */
             )}
             onPress={() => navigation.navigate("Chat", { chatId: chat.id })}
           />
@@ -88,6 +91,7 @@ const ChatList = () => {
               label="Enter user email"
               value={userEmail}
               onChangeText={(text) => setUserEmail(text)}
+              autoCapitalize="none"
             />
           </Dialog.Content>
           <Dialog.Actions>
@@ -101,8 +105,9 @@ const ChatList = () => {
 
       <FAB
         icon="plus"
-        style={{ position: "absolute", bottom: 16, right: 16 }}
+        style={{ position: "absolute", bottom: 16, right: 16, backgroundColor:"#ffa07a" }}
         onPress={() => setIsDialogVisible(true)}
+        color = "#ffffff"
       />
     </View>
   );

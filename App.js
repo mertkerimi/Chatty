@@ -23,7 +23,6 @@ const firebaseConfig = {
   appId: "1:476739731210:web:fa021f8ddce029bd77c4f3"
 };
 
-
 firebase.initializeApp(firebaseConfig);
 
 const Stack = createNativeStackNavigator();
@@ -35,7 +34,7 @@ const TabsNavigator = () => {
   useEffect(() => {
     firebase.auth().onAuthStateChanged((user) => {
       if (!user) {
-        navigation.navigate("SignUp");
+        navigation.navigate("SignIn");
       }
     });
   }, []);
@@ -52,8 +51,8 @@ const TabsNavigator = () => {
             />
           );
         },
-        tabBarActiveTintColor: '#735d78',
-        tabBarInactiveTintColor: 'gray',
+        tabBarActiveTintColor: '#ffa07a',
+        tabBarInactiveTintColor: '#ffa07a',
       })}
     >
       <Tabs.Screen name="ChatList" component={ChatList} />
@@ -67,7 +66,7 @@ const theme = {
   roundness: 2,
   colors: {
     ...DefaultTheme.colors,
-    primary: "#8d6f4d",
+    primary: "#FFB905",
     accent: "#735d78",
   },
 };
@@ -86,12 +85,12 @@ const App = () => {
           <Stack.Screen
             name="SignUp"
             component={SignUp}
-            options={{ presentation: "fullScreenModal" }}
+            options={{ presentation: "formSheet" }}
           />
           <Stack.Screen
             name="SignIn"
             component={SignIn}
-            options={{ presentation: "fullScreenModal" }}
+            options={{ presentation: "fullScreenModal"}}
           />
         </Stack.Navigator>
       </Provider>

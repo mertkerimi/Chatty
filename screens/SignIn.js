@@ -34,17 +34,20 @@ const SignIn = () => {
         </Subheading>
       )}
       <TextInput
-        label="Email"
+        label="E-mail"
         style={{ marginTop: 12 }}
         value={email}
         onChangeText={(text) => setEmail(text)}
+        keyboardType="email-address"
+        autoCapitalize="none"
       />
       <TextInput
-        label="Password"
+        label="Şifre"
         style={{ marginTop: 12 }}
         value={password}
         onChangeText={(text) => setPassword(text)}
         secureTextEntry
+        autoCapitalize="none"
       />
       <View
         style={{
@@ -54,10 +57,10 @@ const SignIn = () => {
         }}
       >
         <Button compact onPress={() => navigation.navigate("SignUp")}>
-          Sıgn Up
+          Kayıt Ol
         </Button>
         <Button mode="contained" onPress={() => signIn()} loading={isLoading}>
-          Sıgn In
+          Giriş Yap
         </Button>
       </View>
     </View>
