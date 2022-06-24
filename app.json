@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "StarChat",
-    "slug": "StarChat",
+    "name": "Chatty",
+    "slug": "Chatty",
     "version": "1.0.0",
     "sdkVersion": "44.0.0",
     "orientation": "portrait",
