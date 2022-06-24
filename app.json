@@ -7,7 +7,7 @@
     "orientation": "portrait",
     "icon": "./assets/newIcon.png",
     "splash": {
-      "image": "./assets/chat.gif",
+      "image": "./assets/chat.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
